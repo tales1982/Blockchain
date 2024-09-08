@@ -24,8 +24,26 @@ e estale as dependecias restantes:
   npm install @tailwindcss/forms eth-revert-reason ethers framer-motion react react-dom react-icons
   npm run dev
 ```
-
+## Vamos usar uma ferramenta tailwindcss pra facilitar o uso do css
 
 ```bash
-
+  npm install -D tailwindcss postcss autoprefixer
+  npx tailwindcss init
 ```
+
+## Agora navegue ate pasta smart_contract
+
+```bash
+  cd../smart_contract
+```
+- crie um json vazio
+
+```bash
+  npm install -y
+```
+- retorne para o cliente
+
+```bash
+  cd../client
+```
+# Vamos criar os components

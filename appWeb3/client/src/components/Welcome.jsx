@@ -40,19 +40,18 @@ const Welcome = () => {
         {/* Esquerda - Texto e Botão */}
         <div className="flex flex-col justify-start items-start flex-1">
           <h1 className="text-5xl sm:text-5xl text-white font-semibold py-1">
-            Mande crypto <br />
-            ao redor do Mundo!
+            Envoyez des crypto <br />
+            partout dans le monde!
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Explore o Mundo Cripto! Compre e Venda CriptoMoedas Facilmente pelo
-            Krypt!
+            Explorez le monde des cryptos ! Achetez et vendez des cryptomonnaies facilement avec Krypt!
           </p>
           <button
             type="button"
             onClick={connectWallet}
             className="flex justify-center items-center my-5 bg-[#b53a41] p-3 rounded-full cursor-pointer hover:bg-[#f71524] w-full text-white text-lg font-semibold"
           >
-            Conectar Carteira
+            Connecter le portefeuille
           </button>
 
           {/* Características */}
@@ -60,7 +59,7 @@ const Welcome = () => {
             <div
               className={`cursor-pointer hover:bg-[#146a92] ${commonStyles}`}
             >
-              Seguro
+              Sécurité
             </div>
             <div
               className={`cursor-pointer hover:bg-[#146a92] ${commonStyles}`}
@@ -70,12 +69,12 @@ const Welcome = () => {
             <div
               className={`cursor-pointer hover:bg-[#146a92] ${commonStyles}`}
             >
-              Agilidade
+              Rapidité
             </div>
             <div
               className={`cursor-pointer hover:bg-[#146a92] ${commonStyles}`}
             >
-              Taxas Atrativas
+              Frais Attractifs
             </div>
             <div
               className={`cursor-pointer hover:bg-[#146a92] ${commonStyles}`}
@@ -100,7 +99,7 @@ const Welcome = () => {
                 </div>
                 <BsInfoCircle fontSize={20} color="#ffff" />
               </div>
-              <p className="text-white font-light text-sm">Adress</p>
+              <p className="text-white font-light text-sm">Adresse</p>
               <p className="text-white font-semibold text-lg mt-1">Ethereum</p>
             </div>
           </div>
@@ -109,25 +108,25 @@ const Welcome = () => {
         {/* Formulário */}
         <div className="p-14 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
           <Input
-            placeholder="Address To"
+            placeholder="Adresse de réception"
             name="AddressTo"
             type="text"
             handleChange={() => {}}
           />
           <Input
-            placeholder="Amount (ETH)"
+            placeholder="Montant (ETH)"
             name="amount"
             type="number"
             handleChange={() => {}}
           />
           <Input
-            placeholder="Keyword (Gif)"
+            placeholder="Mot-clé (Gif)"
             name="keyword"
             type="text"
             handleChange={() => {}}
           />
           <Input
-            placeholder="Enter Message"
+            placeholder="Entrez le message"
             name="message"
             type="text"
             handleChange={() => {}}
@@ -143,7 +142,7 @@ const Welcome = () => {
                 onClick={handleSubmit}
                 className="text-white w-full mt-4 border-[1px] border-white cursor-pointer hover:bg-[#c445e4] rounded-full "
               >
-                Send Now
+                Envoyer maintenant
               </button>
             )}
           </div>

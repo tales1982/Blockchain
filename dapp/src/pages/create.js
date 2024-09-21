@@ -3,6 +3,7 @@ import '../app/globals.css';
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import {addCampaign} from "@/services/Web3Service";
 
 export default function Creatte() {
 
@@ -14,7 +15,13 @@ export default function Creatte() {
     }
 
     function btnSaveClick() {
-        alert(JSON.stringify(campaign));
+        setMessage("Sauver ... attendez ...");
+        addCampaign(campaign)
+        .then(tx =>setMessage(JSON.stringify(tx)))
+        .catch(err => {
+            console.error(err);
+            setMessage(err.message);
+        })
     }
 
 
@@ -35,19 +42,19 @@ export default function Creatte() {
         <div className="col-6">
             <div className="form-floating mb-3">
                 <input type="text" id="title" className="form-control" value={campaign.title} onChange={onInputChange} />
-                <label for="title">Nom de la campagne:</label>
+                <label htmlFor="title">Nom de la campagne:</label>
             </div>
             <div className="form-floating mb-3">
                 <textarea id="description" className="form-control" value={campaign.description} onChange={onInputChange}/>
-                <label for="description">description:</label>
+                <label htmlFor="description">description:</label>
             </div>
             <div className="form-floating mb-3">
                 <input type="text" id="imageUrl" className="form-control" value={campaign.imageUrl} onChange={onInputChange}/>
-                <label for="imageUrl">URL d'image:</label>
+                <label htmlFor="imageUrl">URL d'image:</label>
             </div>
             <div className="form-floating mb-3">
                 <input type="text" id="videoUrl" className="form-control" value={campaign.videoUrl} onChange={onInputChange}/>
-                <label for="videoUrl">URL vidéo:</label>
+                <label htmlFor="videoUrl">URL vidéo:</label>
             </div>
         </div>
         <div className="col-6 mb-3">
@@ -56,6 +63,11 @@ export default function Creatte() {
         <div className="col-6 mb-3 ">
             <Link href="/" className="btn btn-secondary col-12 p-3">Return</Link>
         </div>
+        {
+          message
+          ? <div className="alert alert-success p-3 col-6" role="alert">{message}</div>
+          : <></>
+        }
         <Footer />
       </div>
     </>

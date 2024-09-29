@@ -15,8 +15,8 @@ export default function Timeline() {
     try {
       const result = await getLastTweets(page);
       if(page === 1) {
-       tweets.push(...result);
-        setTweets(tweets.reverse());
+        setTweets((prevTweets) => [...prevTweets, ...result].reverse());
+
       }
       else {
         setTweets(result.reverse());

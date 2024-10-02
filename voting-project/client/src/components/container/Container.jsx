@@ -1,4 +1,8 @@
 import React from "react";
+import Header from "../header/Header"; 
+import Article from "../article/Article";
+import Footer from "../footer/Footer";
+
 import {
   AsideStyles,
   MainStyles,
@@ -6,8 +10,7 @@ import {
   ContainerStyles as ContainerStyle,
   HeaderStyles,
   ContentWrapper,
-} from "./containerStyles"; // Importe o Container corretamente
-
+} from "./styles";
 const Container = () => {
   return (
     <ContainerStyle>
@@ -17,14 +20,12 @@ const Container = () => {
         </AsideStyles>
         <MainStyles>
           <HeaderStyles>
-            <h1>Header</h1>
+            <Header/>
           </HeaderStyles>
-          <h1>Section</h1>
+          <Article />
         </MainStyles>
       </ContentWrapper>
-      <FooterStyles>
-        <h1>Footer</h1>
-      </FooterStyles>
+        <Footer />
     </ContainerStyle>
   );
 };

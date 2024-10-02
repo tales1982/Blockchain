@@ -1,7 +1,8 @@
-// GlobalStyles.js
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,400&family=Sixtyfour+Convergence&display=swap');
+
   * {
     margin: 0;
     padding: 0;
@@ -9,9 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
   }
 
   a {

@@ -7,8 +7,8 @@ const StudentCard = ({ name, age, image, onVote }) => {
       <Image src={image} alt={name} />
       <Info>
         <Name>{name}</Name>
-        <Age>Idade: {age}</Age>
-        <VoteButton onClick={onVote}>Votar</VoteButton>
+        <Age>Age: {age}</Age>
+        <VoteButton onClick={onVote}>Poll</VoteButton>
       </Info>
     </CardContainer>
   );

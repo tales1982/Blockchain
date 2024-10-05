@@ -2,6 +2,6 @@
 const Voting = artifacts.require("Voting");
 
 module.exports = function (deployer) {
-  const candidates = ["Candidate1", "Candidate2", "Candidate3"];
+  const candidates = ["Alice", "Bob", "Charlie"];
   deployer.deploy(Voting, candidates);
 };
